@@ -6,6 +6,5 @@ sudo -u $USER brew update &&
 sudo -u $USER brew list | xargs brew install &&
 sudo -u $USER brew cleanup --prune=all &&
 sudo -u $USER brew autoremove &&
-sudo /usr/sbin/periodic daily weekly monthly &&
 sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder &&
 sudo -S purge
