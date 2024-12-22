@@ -9,7 +9,7 @@ sudo -u $USER brew tap --repair &&
 sudo -u $USER brew autoremove &&
 sudo -S dscacheutil -flushcache &&
 sudo -S killall -HUP mDNSResponder &&
-sudo -S purge && 
-sudo -S softwareupdate -i -a -R --agree-to-license --verbose &&
-sudo -S rm /Users/$USER/.ssh/known_hosts &&
+sudo -S purge &&
+touch /Users/$USER/.ssh/known_hosts | echo "oi" >> /Users/$USER/.ssh/known_hosts | rm /Users/$USER/.ssh/known_hosts &&
+sudo -S softwareupdate -i -a -R --agree-to-license --verbose 
 
